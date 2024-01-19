@@ -311,7 +311,7 @@ int main(void)
 
 //##############################################################################################################
 
-//例 2-26 实现一个简单程序，运行时显示“Menu: A(dd) D(elete) S(ort) Q(uit),Select one:”提示用户输入
+//例2-26 实现一个简单程序，运行时显示“Menu: A(dd) D(elete) S(ort) Q(uit),Select one:”提示用户输入
 //A表示增加,D表示删除,S表示排序,Q表示退出,输入为A,D,S时分别提示"数据已经增加,删除,排序."输入为Q时程序结束.
 
 //(1)要求使用if-else语句进行判断,用break,continue控制程序流程.
@@ -324,28 +324,28 @@ int main(void)
 		cout << "Menu: A(dd) D(elete) S(ort) Q(uit),Select one: ";
 		cin >> ch;
 
-		if (ch == 'A')
+		if (ch == 'A' || ch == 'a')
 		{
 			cout << "数据已经增加.\n";
 			system("pause");
 			system("cls");
 			continue;
 		}
-		if (ch == 'D')
+		if (ch == 'D' || ch == 'd')
 		{
 			cout << "数据已经删除.\n";
 			system("pause");
 			system("cls");
 			continue;
 		}
-		if (ch == 'S')
+		if (ch == 'S' || ch == 's')
 		{
 			cout << "数据已经排序.\n";
 			system("pause");
 			system("cls");
 			continue;
 		}
-		if (ch == 'Q')
+		if (ch == 'Q' || ch == 'q')
 		{
 			break;
 		}
@@ -371,23 +371,27 @@ int main(void)
 
 		switch (ch)
 		{
+		case 'a':
 		case 'A':
 			cout << "数据已经增加.\n";
 			system("pause");
 			system("cls");
 			break;
+		case 'd':
 		case 'D':
 			cout << "数据已经删除.\n";
 			system("pause");
 			system("cls");
 			break;
+		case 's':
 		case 'S':
 			cout << "数据已经排序.\n";
 			system("pause");
 			system("cls");
 			break;
+		case 'q':
 		case 'Q':
-			return 0;
+			exit(0);
 		default:
 			cout << "请输入正确的指令.\n";
 			system("pause");
@@ -400,7 +404,6 @@ int main(void)
 }*/
 
 //##############################################################################################################
-
 
 
 
